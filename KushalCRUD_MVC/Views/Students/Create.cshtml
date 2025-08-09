@@ -1,0 +1,26 @@
+﻿@model KushalCRUD_MVC.Models.Student
+@{
+    ViewData["Title"] = "Create Student";
+}
+<h1>Create Student</h1>
+<form asp-action="Create">
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <td><label>FullName:</label></td>
+            <td><input asp-for="FullName" /></td>
+        </tr>
+        <tr>
+            <td><label> Age:</label></td>
+            <td><input asp-for="Age" /></td>
+        </tr>
+        <tr>
+            <td><label>Address:</label></td>
+            <td><input asp-for="Address" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Create" />
+            </td>
+        </tr>
+    </table>
+</form>

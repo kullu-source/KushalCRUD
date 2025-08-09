@@ -1,0 +1,27 @@
+﻿@model KushalCRUD_MVC.Models.Student
+@{
+    ViewData["Title"] = "Edit Student";
+}
+<h1>Edit Student</h1>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <td><label>FullName:</label></td>
+            <td><input asp-for="FullName" /></td>
+        </tr>
+        <tr>
+            <td><label>Age:</label></td>
+            <td><input asp-for="Age" /></td>
+        </tr>
+        <tr>
+            <td><label>Address:</label></td>
+            <td><input asp-for="Address" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input type="submit" value="Update" />
+            </td>
+        </tr>
+    </table>
+</form>

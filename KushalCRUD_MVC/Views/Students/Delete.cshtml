@@ -1,0 +1,31 @@
+﻿@model KushalCRUD_MVC.Models.Student
+@{
+    ViewData["Title"] = "Delete Student";
+}
+<h1>Delete Student</h1>
+<h3>Are you sure you want to delete this?</h3>
+<table border="1" style="border-collapse: collapse;">
+    <tr>
+        <td><strong>Full Name:</strong></td>
+        <td>@Model.FullName</td>
+    </tr>
+    <tr>
+        <td><strong>Age:</strong></td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td><strong>Address:</strong></td>
+        <td>@Model.Address</td>
+    </tr>
+</table>
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="Id" />
+    <table border="1" style="border-collapse: collapse; margin-top: 10px;">
+        <tr>
+            <td style="text-align: center;" colspan="2">
+                <input type="submit" value="Delete" />
+                <a asp-action="Index" style="margin-left: 10px;">Back to List</a>
+            </td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<KushalCRUD_MVC.Models.Student>
+@{
+    ViewData["Title"] = "Students";
+}
+<h1>Students</h1>
+<a asp-action="Create">Create New</a>
+<table style="border-collapse: collapse; width: 50%; border: 1px solid black; margin: auto;">
+    <thead>
+        <tr>
+            <th style="padding: 5px; border: 1px solid black;">Full Name</th>
+            <th style="padding: 5px; border: 1px solid black;">Age</th>
+            <th style="padding: 5px; border: 1px solid black;">Address</th>
+            <th style="padding: 5px; border: 1px solid black;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td style="padding: 5px; border: 1px solid black;">@student.FullName</td>
+                <td style="padding: 5px; border: 1px solid black;">@student.Age</td>
+                <td style="padding: 5px; border: 1px solid black;">@student.Address</td>
+                <td style="padding: 5px; border: 1px solid black;">
+                    <a asp-action="Edit" asp-route-id="@student.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@student.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
