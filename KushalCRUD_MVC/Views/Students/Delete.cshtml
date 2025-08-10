@@ -18,7 +18,7 @@
         <td>@Model.Address</td>
     </tr>
 </table>
-<form asp-action="DeleteConfirmed">
+<form asp-action="Delete" method ="post">
     <input type="hidden" asp-for="Id" />
     <table border="1" style="border-collapse: collapse; margin-top: 10px;">
         <tr>
@@ -28,4 +28,4 @@
             </td>
         </tr>
     </table>
-</form>
+</form> 
